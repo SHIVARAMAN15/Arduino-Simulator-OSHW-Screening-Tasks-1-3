@@ -5,7 +5,7 @@ The simulator supports visual circuit creation, automatic pin wiring, Arduino co
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 This project demonstrates a simple yet structured approach to simulating an Arduino-based experiment in the browser.  
 Users can drag and drop components, configure digital pins, view auto-generated Arduino code, and run a logic-level simulation that mirrors the generated code behavior.
@@ -14,7 +14,7 @@ The implementation is intentionally minimal and focused on **engineering correct
 
 ---
 
-## 🧩 Supported Components
+##  Supported Components
 
 - Arduino Uno  
 - LED  
@@ -28,7 +28,7 @@ The implementation is intentionally minimal and focused on **engineering correct
 
 ---
 
-## ✨ Features
+##  Features
 
 ### 🔹 Task 1 – Interface & Component Handling
 - Drag-and-drop component palette
