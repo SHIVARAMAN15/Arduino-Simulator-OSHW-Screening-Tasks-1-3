@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Simulator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Toolbar -->
+        <header class="toolbar">
+            <div class="title">Arduino Simulator</div>
+            <div class="controls">
+                <button id="btn-start" class="btn-control" title="Start Simulation">
+                    <span class="icon">▶</span> Start
+                </button>
+                <button id="btn-stop" class="btn-control hidden" title="Stop Simulation">
+                    <span class="icon">⏹</span> Stop
+                </button>
+                <div class="separator"></div>
+                <button id="btn-toggle-code" class="btn-toggle" title="Toggle Code View">
+                    Show Code
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Workspace -->
+        <div class="workspace">
+            <!-- Component Palette -->
+            <aside class="palette">
+                <h3>Components</h3>
+                <div class="component-list">
+                    <div class="draggable-item" draggable="true" data-type="arduino-uno">
+                        <div class="icon">Micro</div>
+                        <span class="label">Arduino Uno</span>
+                    </div>
+                    <div class="draggable-item" draggable="true" data-type="led">
+                        <div class="icon">🔆</div>
+                        <span class="label">LED</span>
+                    </div>
+                    <div class="draggable-item" draggable="true" data-type="push-button">
+                        <div class="icon">🔘</div>
+                        <span class="label">Push Button</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Canvas Area -->
+            <main id="canvas-container" class="canvas-area">
+                <div id="simulation-canvas" class="canvas">
+                    <!-- Components will optionally be dropped here -->
+                    <div class="grid-background"></div>
+                </div>
+            </main>
+
+            <!-- Code View Panel (Initially Hidden) -->
+            <aside id="code-panel" class="code-panel hidden">
+                <div class="panel-header">
+                    <span>Source Code (read-only)</span>
+                    <button id="btn-close-code" class="close-btn">×</button>
+                </div>
+                <pre id="code-editor"
+                    class="code-content">// Arduino sketch placeholdervoid setup() {}void loop() {}</pre>
+            </aside>
+
+            <!-- Properties Panel -->
+            <aside id="properties-panel" class="properties-panel hidden">
+                <h3>Properties</h3>
+                <div id="prop-content">
+                    <div class="prop-group">
+                        <label>Component:</label>
+                        <span id="prop-comp-type">-</span>
+                    </div>
+                    <div class="prop-group" id="prop-pin-group">
+                        <label>Pin:</label>
+                        <select id="prop-pin-select"></select>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/ui-manager.js" type="module"></script>
+    <script src="js/drag-drop.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
